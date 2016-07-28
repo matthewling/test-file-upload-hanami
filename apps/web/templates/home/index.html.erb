@@ -1,0 +1,17 @@
+<h1>With whitelist</h1>
+<%=
+  form_for :event, routes.url(:upload), {method: :post, enctype: 'multipart/form-data'} do
+    file_field :image
+
+    submit 'Upload'
+  end
+%>
+
+<h1>Without whitelist</h1>
+<%=
+  form_for :event, routes.url(:upload_without_whitelist), {method: :post, enctype: 'multipart/form-data'} do
+    file_field :image
+
+    submit 'Upload'
+  end
+%>
