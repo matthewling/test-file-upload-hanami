@@ -276,13 +276,13 @@ module Web
       # See: http://hanamirb.org/guides/applications/logging
       #
       # Logger stream. It defaults to STDOUT.
-      # logger.stream "log/development.log"
+      logger.stream "log/development.log"
       #
       # Logger level. It defaults to DEBUG
-      # logger.level :debug
+      logger.level :debug
       #
       # Logger format. It defaults to DEFAULT
-      # logger.format :default
+      logger.format :json
     end
 
     ##
@@ -311,10 +311,10 @@ module Web
       # See: http://hanamirb.org/guides/applications/logging
       #
       # Logger stream. It defaults to STDOUT.
-      # logger.stream "log/production.log"
+      logger.stream "log/production.log"
       #
       # Logger level. It defaults to INFO
-      logger.level :info
+      logger.level :debug
 
       # Logger format.
       logger.format :json
@@ -323,12 +323,11 @@ module Web
         # Don't compile static assets in production mode (eg. Sass, ES6)
         #
         # See: http://www.rubydoc.info/gems/hanami-assets#Configuration
-        compile false
+        compile true
 
         # Use digest file name for asset paths
         #
         # See: http://hanamirb.org/guides/assets/overview
-        digest  true
 
         # Content Delivery Network (CDN)
         #

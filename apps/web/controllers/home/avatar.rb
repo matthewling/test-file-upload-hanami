@@ -1,3 +1,6 @@
+require 'hanami/validations'
+require 'hanami/controller'
+
 module Web::Controllers::Home
   class Avatar
     include Web::Action
